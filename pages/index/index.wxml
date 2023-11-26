@@ -1,0 +1,12 @@
+<view>
+  <SearchBar />
+  <view class="index-swiper">
+    <swiper indicator-dots autoplay circular>
+      <swiper-item wx:for="{{swiperList}}" wx:key="id" wx:for-item="swiper">
+        <navigator url="">
+          <image src="{{baseURL+'image/swiper/'+swiper.swiperPic}}" mode="widthFix" />
+        </navigator>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>
