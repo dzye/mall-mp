@@ -9,4 +9,14 @@
       </swiper-item>
     </swiper>
   </view>
+  <view class="index-bigType">
+    <view class="bigType-item" wx:for="{{bigTypeList}}" wx:key="id" wx:for-item="bigType">
+      <view class="bigType-item-img">
+        <image src="{{baseURL+'image/bigType/'+bigType.image}}" mode="widthFix" />
+      </view>
+      <view class="bigType-item-text">
+        {{bigType.name}}
+      </view>
+    </view>
+  </view>
 </view>

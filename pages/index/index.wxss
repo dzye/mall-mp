@@ -8,3 +8,20 @@ view {
 .index-swiper swiper swiper-item image {
   width: 100%;
 }
+.index-bigType {
+  padding: 20rpx;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #f7f7f7;
+}
+.index-bigType .bigType-item {
+  width: 20%;
+  text-align: center;
+}
+.index-bigType .bigType-item .bigType-item-img {
+  width: 100%;
+}
+.index-bigType .bigType-item image {
+  width: 80%;
+  margin-top: 20rpx;
+}
