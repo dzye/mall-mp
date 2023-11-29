@@ -9,7 +9,8 @@ Page({
   data: {
     swiperList: [],
     baseURL: '',
-    bigTypeList: []
+    bigTypeList: [],
+    hotProductList: [],
   },
 
   /**
@@ -18,6 +19,16 @@ Page({
   onLoad() {
     this.getSwiperList()
     this.getBigTypeList()
+    this.getHotProductList()
+  },
+  getHotProductList() {
+    request('product/findHot', {
+      method: 'get'
+    }).then(res => {
+      this.setData({
+        hotProductList: res.message
+      })
+    })
   },
   getBigTypeList() {
     request('bigType/findAll', {

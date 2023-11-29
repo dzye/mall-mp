@@ -1,6 +1,6 @@
 <view>
   <SearchBar />
-  <view class="index-swiper">
+  <view class="swiper">
     <swiper indicator-dots autoplay circular>
       <swiper-item wx:for="{{swiperList}}" wx:key="id" wx:for-item="swiper">
         <navigator url="">
@@ -9,13 +9,30 @@
       </swiper-item>
     </swiper>
   </view>
-  <view class="index-bigType">
-    <view class="bigType-item" wx:for="{{bigTypeList}}" wx:key="id" wx:for-item="bigType">
-      <view class="bigType-item-img">
+  <view class="bigType">
+    <view class="bigTypeItem" wx:for="{{bigTypeList}}" wx:key="id" wx:for-item="bigType">
+      <view class="bigTypeItemImg">
         <image src="{{baseURL+'image/bigType/'+bigType.image}}" mode="widthFix" />
       </view>
-      <view class="bigType-item-text">
+      <view>
         {{bigType.name}}
+      </view>
+    </view>
+  </view>
+  <view class="hotProduct">
+    <view class="hotProductTitle">
+      热卖推荐
+    </view>
+    <view class="hotProductList">
+      <view class="hotProductItem" wx:for="{{hotProductList}}" wx:key="id" wx:for-item="product">
+        <navigator url="">
+          <view>
+            <image src="{{baseURL+'image/product/'+product.proPic}}" mode="widthFix" />
+          </view>
+          <view class="productName">{{product.name}}</view>
+          <view class="productPrice">￥{{product.price}}</view>
+          <button size="mini" type="warn">立即购买</button>
+        </navigator>
       </view>
     </view>
   </view>
