@@ -1,1 +1,42 @@
-/* pages/category/index.wxss */
+.cates-content {
+  height: calc(100vh - 90rpx);
+  display: flex;
+}
+.cates-content .cates-left {
+  flex: 2;
+  height: 100%;
+}
+.cates-content .cates-right {
+  flex: 3;
+  height: 100%;
+  padding: 20rpx;
+}
+.cates-content .leftMenuItem {
+  text-align: center;
+  line-height: 72rpx;
+  font-size: 32rpx;
+}
+.cates-content .leftItemSelected {
+  color: var(--themeColor);
+  border-left: 10rpx solid var(--themeColor);
+  font-weight: 600;
+}
+.cates-content .smallTypeName {
+  font-size: 32rpx;
+  font-weight: 500;
+}
+.cates-content .productItem {
+  display: flex;
+  padding: 16rpx;
+  background-color: #f3f3f3;
+  margin-top: 16rpx;
+}
+.cates-content .productItem .imageBox {
+  width: 90rpx;
+  height: 90rpx;
+  margin-right: 8rpx;
+}
+.cates-content .productItem .imageBox image {
+  width: 100%;
+  height: 100%;
+}

@@ -1,2 +1,26 @@
-<!--pages/category/index.wxml-->
-<text>pages/category/index.wxml</text>
+<view>
+  <SearchBar />
+  <view class="cates-content">
+    <scroll-view scroll-y class="cates-left">
+      <view wx:for="{{leftMenuList}}" wx:key="id" class="{{item.id===selectId?'leftItemSelected leftMenuItem':'leftMenuItem'}}" bind:tap="getRightList" data-item="{{item}}">
+        {{item.name}}
+      </view>
+    </scroll-view>
+    <scroll-view scroll-y class="cates-right" scroll-top="{{rightScrollTop}}">
+      <view wx:for="{{rightMenuList}}" wx:key="id" wx:for-item="smallType" class="rightMenuItem">
+        <view class="smallTypeName">{{ smallType.name }}</view>
+        <view wx:for="{{smallType.productList}}" wx:key="id" wx:for-item="product">
+          <navigator url="" class="productItem">
+            <view class="imageBox">
+              <image src="{{baseURL+'image/product/'+product.proPic}}" mode="aspectFit" />
+            </view>
+            <view>
+              <view>{{product.name}}</view>
+              <view>￥{{product.price}}</view>
+            </view>
+          </navigator>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
